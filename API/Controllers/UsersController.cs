@@ -1,5 +1,6 @@
 using API.Data;
 using API.Entities;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,11 +24,11 @@ public class UsersController: ControllerBase
     }
 
     [HttpGet("{id}")]
-    public ActionResult<AppUser> GetUser(int id){
+    public async Task<ActionResult<AppUser>> GetUser(int id){
         // var user =_dbcontext.Users.Find(id);
         // return user;
 
-        return _dbcontext.Users.Find(id);
+        return await _dbcontext.Users.FindAsync(id);
     }
 
 }
