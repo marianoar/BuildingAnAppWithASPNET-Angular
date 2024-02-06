@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   title: string = 'client';
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     this.http.get<any>('/api/users').subscribe({
       next: (response) => (this.users = response),
       error: (error) => console.log(error),
-      complete: () => console.log('Request completed'),
+      complete: () => console.log('request completed'),
     });
   }
 }
