@@ -1,0 +1,20 @@
+<h4>Internal server error -</h4>
+
+<ng-container *ngIf="error">
+  <h5 class="text-danger">Error: {{ error.message }}</h5>
+  <p class="font-weight-bold">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim magni hic quod
+    animi modi laudantium corporis laborum nesciunt nulla, necessitatibus
+    aliquam, inventore similique vel quis quam incidunt, recusandae mollitia
+    aut.
+  </p>
+  <p>What to do next?</p>
+  <ol>
+    <li></li>
+    <li></li>
+  </ol>
+  <p style="font-weight: bold">stack trace:</p>
+  <code class="mt-5" style="background-color: antiquewhite">
+    {{ error.details }}
+  </code>
+</ng-container>
