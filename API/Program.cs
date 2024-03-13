@@ -51,4 +51,21 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
+using var scope = app.Services.CreateScope(); //da acceso a todos los servicios en esta clase
+
+var services =  scope.ServiceProvider;
+
+try
+{
+    var context = services.GetRequiredService<DataContext>();
+    await context.Database.MigrateAsync();
+    await Seed.SeedUser(context);
+}
+catch(Exception ex)
+{
+    var logger = services.GetService<ILogger<Program>>();
+
+    logger.LogError(ex, "Error during migration");
+}
+
 app.Run();
