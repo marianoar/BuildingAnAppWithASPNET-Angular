@@ -31,12 +31,12 @@ namespace API.Entities
 
         public string City { get; set; }
         public string Country { get; set; }
-        public List<Photo> photos { get; set; } = new(); // reduce el  new List<Photo>()
+        public List<Photo> Photos { get; set; } = new(); // reduce el  new List<Photo>()
 
-        public int GetAge()
-        {
-            return DateOfBirth.CalculateAge();
-        }
+        //public int GetAge()
+        //{
+        //    return DateOfBirth.CalculateAge();
+        //}
 
 
 
