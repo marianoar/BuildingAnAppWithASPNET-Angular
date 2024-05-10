@@ -35,7 +35,7 @@ export class NavComponent {
     console.log(this.model);
     this.accountService.login(this.model).subscribe({
       next: (_) => {
-        this.router.navigateByUrl('/members');
+       // this.router.navigateByUrl('/members');
         // console.log(response);
         // this.loggedIn = true;
       },
