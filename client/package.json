@@ -21,6 +21,7 @@
     "@angular/router": "^16.2.0",
     "bootstrap": "^5.2.3",
     "bootswatch": "^5.3.3",
+    "font-awesome": "^4.7.0",
     "ng-gallery": "^11.0.0",
     "ngx-bootstrap": "^11.0.2",
     "ngx-toastr": "^17.0.2",
